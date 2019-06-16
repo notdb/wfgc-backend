@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 
 // restricted put (arcade)
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", restricted, async (req, res) => {
   try {
     const api = await Arcades.update(req.params.id, req.body);
 
@@ -29,7 +29,7 @@ router.put("/:id", async (req, res) => {
 
 // restricted delete (arcade)
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", restricted, async (req, res) => {
   try {
     const arcade = await Arcades.order66(req.params.id);
     res.status(200).json(arcade);
@@ -43,7 +43,7 @@ router.delete("/:id", async (req, res) => {
 
 // restricted post (new arcade)
 
-router.post("/add", async (req, res) => {
+router.post("/add", restricted, async (req, res) => {
   try {
     const [id] = await Arcades.add(req.body, "id");
     const arcade = await db("arcades")

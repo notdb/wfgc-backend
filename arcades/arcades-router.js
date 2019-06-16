@@ -15,6 +15,18 @@ router.get("/", (req, res) => {
 
 // restricted delete (arcade)
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const arcade = await Arcades.order66(req.params.id);
+    res.status(200).json(arcade);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error deleting account"
+    });
+  }
+});
+
 // restricted post (new arcade)
 
 router.post("/add", async (req, res) => {

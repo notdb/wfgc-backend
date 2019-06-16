@@ -5,7 +5,9 @@ module.exports = {
   find,
   findBy,
   findById,
-  findAllArcadeInfo
+  findAllArcadeInfo,
+  order66,
+  update
 };
 
 function find() {
@@ -20,10 +22,8 @@ function findBy(filter) {
   return db("arcades").where(filter);
 }
 
-async function add(arcade) {
-  const [id] = await db("arcades").insert(arcade);
-
-  return findById(id);
+function add(arcade) {
+  return find().insert(arcade);
 }
 
 function findById(id) {
@@ -31,4 +31,16 @@ function findById(id) {
     .select("id", "arcadename")
     .where({ id })
     .first();
+}
+
+function order66(id) {
+  return find()
+    .where({ id })
+    .del();
+}
+
+function update(id, changes) {
+  return find()
+    .where({ id })
+    .update(changes, "*");
 }

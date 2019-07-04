@@ -22,6 +22,9 @@ router.post("/register", (req, res) => {
     });
 });
 
+// user has to be admin to login currently
+// need to fix
+
 router.post("/login", (req, res) => {
   let { username, password } = req.body;
   console.log(req.body);

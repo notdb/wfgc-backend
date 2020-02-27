@@ -1,3 +1,6 @@
+const bcrypt = require('bcryptjs');
+
+
 exports.seed = function(knex, Promise) {
   return knex("users").insert([
     { username: "admin", password: "abc123", admin: 1 },

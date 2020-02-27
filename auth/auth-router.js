@@ -3,12 +3,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const Users = require("../users/users-model.js");
-
 const secrets = require("../config/secret.js");
 
 router.post("/register", (req, res) => {
   let user = req.body;
-
+  console.log(req.body);
   const hash = bcrypt.hashSync(user.password, 8);
   user.password = hash;
 
@@ -31,7 +30,7 @@ router.post("/login", (req, res) => {
   Users.findBy({ username })
     .first()
     .then(user => {
-      if (user.admin && bcrypt.compareSync(password, user.password)) {
+      if (bcrypt.compareSync(password, user.password)) {
         const token = generateToken(user);
 
         res.status(200).json({

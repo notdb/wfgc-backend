@@ -6,8 +6,8 @@ exports.seed = function(knex, Promise) {
       arcadetown: "Santa Ana",
       arcadestate: "CA",
       arcadezipcode: 92701,
-      lat: -117.87,
-      long: 33.73
+      long: -117.868344,
+      lat: 33.748706
     },
     {
       arcadename: "Esports Arena Oakland",
@@ -15,8 +15,8 @@ exports.seed = function(knex, Promise) {
       arcadetown: "Oakland",
       arcadestate: "CA",
       arcadezipcode: 94607,
-      lat: -122.34,
-      long: 37.78
+      long: -122.27238,
+      lat: 37.79407
     },
     {
       arcadename: "Super Arcade",
@@ -24,8 +24,8 @@ exports.seed = function(knex, Promise) {
       arcadetown: "Azusa",
       arcadestate: "CA",
       arcadezipcode: 91702,
-      lat: -118.05,
-      long: 34.1
+      long: -117.907196,
+      lat: 34.133698
     },
     {
       arcadename: "Esports Arena Las Vegas",
@@ -33,8 +33,8 @@ exports.seed = function(knex, Promise) {
       arcadetown: "Las Vegas",
       arcadestate: "NV",
       arcadezipcode: 89119,
-      lat: -115.18,
-      long: 36.05
+      long: -115.175861,
+      lat: 36.095303
     },
     {
       arcadename: "Next Level Arcade",
@@ -42,8 +42,8 @@ exports.seed = function(knex, Promise) {
       arcadetown: "Brooklyn",
       arcadestate: "NY",
       arcadezipcode: 11232,
-      lat: -74.02,
-      long: 40.64
+      long: -74.00217,
+      lat: 40.656876
     }
   ]);
 };

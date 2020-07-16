@@ -1,6 +1,6 @@
 const request = require('supertest');
 const server = require('./server.js');
-const { resource } = require('../../enterprise_device/backend/api/server.js');
+
 
 describe('server.js', ()=>{
     describe('index route', ()=> {

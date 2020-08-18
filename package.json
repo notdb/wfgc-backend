@@ -1,0 +1,41 @@
+{
+  "name": "wfgc-backend",
+  "version": "1.0.0",
+  "description": "backend for wfgc",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon",
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notdb/wfgc-backend.git"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "Doug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notdb/wfgc-backend/issues"
+  },
+  "homepage": "https://github.com/notdb/wfgc-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.17.6",
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "knex-cleaner": "^1.1.4",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}

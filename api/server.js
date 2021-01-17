@@ -19,5 +19,5 @@ server.use("/api/arcades", arcadesRouter);
 server.get("/", (req, res) => {
   res.send("It's alive!");
 });
-
+//test
 module.exports = server;
